@@ -12,16 +12,20 @@ public class DashBoard extends BaseClass{
 
     @FindBy(xpath = "//input[@placeholder='Search']")
     WebElement textSearch;
+    @FindBy (xpath = "//a[@id='ember23']//*[local-name()='svg']")
+    WebElement myNetwork;
     public DashBoard (WebDriver driver) {
         PageFactory.initElements (driver, this);
     }
     /* @Description - send.Keys method is to set the data in to the search box
      * actions.sendKeys (Keys.ENTER).perform () method is used to perform keyboard events*/
-    
+
     public void sendText() throws InterruptedException {
         textSearch.sendKeys ("tata consultancy services");
         Actions actions = new Actions (driver);
         actions.sendKeys (Keys.ENTER).perform ();
         Thread.sleep (1200);
+        myNetwork.click ();
+        Thread.sleep (1000);
     }
 }

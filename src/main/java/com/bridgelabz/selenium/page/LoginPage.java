@@ -27,8 +27,9 @@ public class LoginPage extends BaseClass{
      * This method is to click on Next Button */
 
     public void loginToApplication () throws InterruptedException {
-        userId.sendKeys ("amarprajapati99@gmail.com");
-        userPass.sendKeys ("Laxmi0777");
+        userId.sendKeys ("abc@gmail.com");
+        Thread.sleep (1200);
+        userPass.sendKeys ("JayHindJayBharat");
         loginButton.click ();
         Thread.sleep (3000);
     }
