@@ -9,12 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage extends BaseClass{
 
     /* @Description - Using FindBy for locating elements */
+
     @FindBy (xpath = "//input[@id='username']")
     WebElement userId;
     @FindBy (xpath = "//input[@id='password']")
     WebElement userPass;
     @FindBy (xpath = "//button[normalize-space()='Sign in']")
     WebElement loginButton;
+
+    /* @Description - Called parameterized constructor */
 
     public LoginPage (WebDriver driver) {
         PageFactory.initElements (driver, this);
