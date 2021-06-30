@@ -75,6 +75,12 @@ public class LoginTest extends BaseClass{
         loginPage.loginToApplication ();
         SignOut signOut = new SignOut (driver);
         signOut.setClickOnMe ();
+        String actualUrl = driver.getCurrentUrl ();
+        String expectedUrl = "https://www.linkedin.com/feed/";
+        Assert.assertEquals (actualUrl,expectedUrl);
+        String title = driver.getTitle ();
+        String expectedTitle = "Feed | LinkedIn";
+        Assert.assertEquals (title,expectedTitle);
     }
 
 }

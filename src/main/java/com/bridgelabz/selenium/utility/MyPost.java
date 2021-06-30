@@ -13,7 +13,7 @@ import java.awt.event.KeyEvent;
 
 public class MyPost extends BaseClass{
 
-    /*Used FindBy Annotations for getting elements using locators
+    /* Used FindBy Annotations for getting elements using locators
      * Initialize web elements */
 
     @FindBy(xpath = "//div[@class = 'display-flex align-items-center mt2 mr4 ml4']")
@@ -34,12 +34,12 @@ public class MyPost extends BaseClass{
     @FindBy(xpath = "//img[@alt='LIKE']")
     WebElement like;
 
-    /*Called parameterized constructor */
+    /* Called parameterized constructor */
     public MyPost (WebDriver driver) {
         PageFactory.initElements(driver,this);
     }
 
-    /*@Desc-Called method setPost for using all the elements to be done
+    /*@Description -Called method setPost for using all the elements to be done
      * with operations.
      * Used Action class for moving elements and sending keys
      * And also for uploading media*/
@@ -57,7 +57,7 @@ public class MyPost extends BaseClass{
 
     }
 
-    /*@Desc - Added Robot Class
+    /*@Description - Added Robot Class
      * Performed robot for uploading media
      * Here copied the media address using setClipboardData
      * used robot key events for operating operations*/
